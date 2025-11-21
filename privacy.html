@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | GCC Properties</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg width='60' viewBox='0 0 210 212' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M195.11 37.95L168.09 64.67C150.99 46.58 131.06 37.54 108.3 37.54C88.46 37.54 71.84 44.12 58.45 57.27C45.06 70.42 38.36 86.41 38.36 105.23C38.36 124.05 45.31 141.18 59.21 154.69C73.11 168.21 90.26 174.97 110.65 174.97C123.91 174.97 135.09 172.18 144.19 166.61C153.29 161.04 160.63 152.32 166.21 140.44H107.84V104.4H209.23L209.5 112.9C209.5 130.53 204.93 147.25 195.8 163.05C186.66 178.85 174.84 190.91 160.31 199.22C145.79 207.53 128.75 211.69 109.2 211.69C88.28 211.69 69.62 207.15 53.23 198.06C36.83 188.97 23.86 176.02 14.32 159.22C4.77 142.41 0 124.28 0 104.82C0 78.1499 8.81 54.95 26.44 35.21C47.36 11.74 74.58 0 108.1 0C125.64 0 142.03 3.23998 157.29 9.72998C170.17 15.21 182.78 24.62 195.11 37.96V37.95Z' fill='%23132D20'/><path d='M108.25 160.28C137.875 160.28 161.89 136.265 161.89 106.64C161.89 77.0154 137.875 53 108.25 53C78.6256 53 54.6101 77.0154 54.6101 106.64C54.6101 136.265 78.6256 160.28 108.25 160.28Z' fill='%23917945'/><path d='M74.8701 116.7C76.4001 132.56 90.5201 142.41 105.39 142.41C129.9 142.3 142.15 124.25 141.6 105.54C141.16 87.6 129.13 70.97 106.04 70.86C90.6101 70.86 76.3901 80.5999 74.8601 96.5699H85.8001C87.9901 87.1599 95.5401 81.58 105.49 81.47C121.14 81.25 129.34 93.18 129.78 105.54C130.33 118.67 122.01 132.02 105.49 131.8C95.5301 131.69 87.9801 126.11 85.8001 116.7H74.8601H74.8701Z' fill='%23132D20'/></svg>">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+            <svg class="logo-svg" width="60" viewBox="0 0 210 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M195.11 37.95L168.09 64.67C150.99 46.58 131.06 37.54 108.3 37.54C88.46 37.54 71.84 44.12 58.45 57.27C45.06 70.42 38.36 86.41 38.36 105.23C38.36 124.05 45.31 141.18 59.21 154.69C73.11 168.21 90.26 174.97 110.65 174.97C123.91 174.97 135.09 172.18 144.19 166.61C153.29 161.04 160.63 152.32 166.21 140.44H107.84V104.4H209.23L209.5 112.9C209.5 130.53 204.93 147.25 195.8 163.05C186.66 178.85 174.84 190.91 160.31 199.22C145.79 207.53 128.75 211.69 109.2 211.69C88.28 211.69 69.62 207.15 53.23 198.06C36.83 188.97 23.86 176.02 14.32 159.22C4.77 142.41 0 124.28 0 104.82C0 78.1499 8.81 54.95 26.44 35.21C47.36 11.74 74.58 0 108.1 0C125.64 0 142.03 3.23998 157.29 9.72998C170.17 15.21 182.78 24.62 195.11 37.96V37.95Z" fill="#132D20"/>
+<path d="M108.25 160.28C137.875 160.28 161.89 136.265 161.89 106.64C161.89 77.0154 137.875 53 108.25 53C78.6256 53 54.6101 77.0154 54.6101 106.64C54.6101 136.265 78.6256 160.28 108.25 160.28Z" fill="#917945"/>
+<path d="M74.8701 116.7C76.4001 132.56 90.5201 142.41 105.39 142.41C129.9 142.3 142.15 124.25 141.6 105.54C141.16 87.6 129.13 70.97 106.04 70.86C90.6101 70.86 76.3901 80.5999 74.8601 96.5699H85.8001C87.9901 87.1599 95.5401 81.58 105.49 81.47C121.14 81.25 129.34 93.18 129.78 105.54C130.33 118.67 122.01 132.02 105.49 131.8C95.5301 131.69 87.9801 126.11 85.8001 116.7H74.8601H74.8701Z" fill="#132D20"/>
+</svg>
+
+
+            </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#team">Team</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Privacy Policy Section -->
+    <section class="privacy-policy" style="padding: 100px 0; background-color: var(--accent-color);">
+        <div class="container">
+            <h1 style="text-align: center; margin-bottom: 40px;">Privacy Policy</h1>
+            <div style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                <p><strong>Effective Date:</strong> January 1, 2025</p>
+
+                <h2>1. Introduction</h2>
+                <p>At GCC Properties, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+
+                <h2>2. Information We Collect</h2>
+                <p>We may collect the following types of information:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> Name, email address, phone number, mailing address</li>
+                    <li><strong>Property Preferences:</strong> Information about your property requirements and preferences</li>
+                    <li><strong>Communication Data:</strong> Records of our communications with you</li>
+                    <li><strong>Usage Data:</strong> Information about how you use our website</li>
+                </ul>
+
+                <h2>3. How We Use Your Information</h2>
+                <p>We use the collected information to:</p>
+                <ul>
+                    <li>Provide real estate services and property recommendations</li>
+                    <li>Communicate with you about properties and services</li>
+                    <li>Improve our website and services</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+
+                <h2>4. Information Sharing</h2>
+                <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy or required by law.</p>
+
+                <h2>5. Data Security</h2>
+                <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+
+                <h2>6. Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate information</li>
+                    <li>Request deletion of your information</li>
+                    <li>Opt-out of marketing communications</li>
+                </ul>
+
+                <h2>7. Cookies</h2>
+                <p>Our website uses cookies to enhance your browsing experience. You can control cookie settings through your browser preferences.</p>
+
+                <h2>8. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                <p>Email: privacy@gccproperties.com<br>
+                Phone: +971 56 767 2020<br>
+                Address: Erica 2h 972 ajman uptown al zahya - AJMAN</p>
+
+                <h2>9. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>GCC <span>PROPERTIES</span></h2>
+                    <p>Redefining luxury living through exceptional properties and unparalleled service.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#about">About Us</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="index.html#portfolio">Portfolio</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="index.html#services">Property Sales</a></li>
+                            <li><a href="index.html#services">Property Search</a></li>
+                            <li><a href="index.html#services">Investment Analysis</a></li>
+                            <li><a href="index.html#services">Property Management</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Erica 2h 972 ajman uptown al zahya - AJMAN</li>
+                            <li><i class="fas fa-phone-alt"></i> +971 56 767 2020</li>
+                            <li><i class="fas fa-envelope"></i> info@gccproperties.ae</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 GCC Properties. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

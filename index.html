@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCC Properties | Luxury Real Estate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg width='60' viewBox='0 0 210 212' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M195.11 37.95L168.09 64.67C150.99 46.58 131.06 37.54 108.3 37.54C88.46 37.54 71.84 44.12 58.45 57.27C45.06 70.42 38.36 86.41 38.36 105.23C38.36 124.05 45.31 141.18 59.21 154.69C73.11 168.21 90.26 174.97 110.65 174.97C123.91 174.97 135.09 172.18 144.19 166.61C153.29 161.04 160.63 152.32 166.21 140.44H107.84V104.4H209.23L209.5 112.9C209.5 130.53 204.93 147.25 195.8 163.05C186.66 178.85 174.84 190.91 160.31 199.22C145.79 207.53 128.75 211.69 109.2 211.69C88.28 211.69 69.62 207.15 53.23 198.06C36.83 188.97 23.86 176.02 14.32 159.22C4.77 142.41 0 124.28 0 104.82C0 78.1499 8.81 54.95 26.44 35.21C47.36 11.74 74.58 0 108.1 0C125.64 0 142.03 3.23998 157.29 9.72998C170.17 15.21 182.78 24.62 195.11 37.96V37.95Z' fill='%23132D20'/><path d='M108.25 160.28C137.875 160.28 161.89 136.265 161.89 106.64C161.89 77.0154 137.875 53 108.25 53C78.6256 53 54.6101 77.0154 54.6101 106.64C54.6101 136.265 78.6256 160.28 108.25 160.28Z' fill='%23917945'/><path d='M74.8701 116.7C76.4001 132.56 90.5201 142.41 105.39 142.41C129.9 142.3 142.15 124.25 141.6 105.54C141.16 87.6 129.13 70.97 106.04 70.86C90.6101 70.86 76.3901 80.5999 74.8601 96.5699H85.8001C87.9901 87.1599 95.5401 81.58 105.49 81.47C121.14 81.25 129.34 93.18 129.78 105.54C130.33 118.67 122.01 132.02 105.49 131.8C95.5301 131.69 87.9801 126.11 85.8001 116.7H74.8601H74.8701Z' fill='%23132D20'/></svg>">
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+            <svg class="logo-svg" width="60" viewBox="0 0 210 212" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M195.11 37.95L168.09 64.67C150.99 46.58 131.06 37.54 108.3 37.54C88.46 37.54 71.84 44.12 58.45 57.27C45.06 70.42 38.36 86.41 38.36 105.23C38.36 124.05 45.31 141.18 59.21 154.69C73.11 168.21 90.26 174.97 110.65 174.97C123.91 174.97 135.09 172.18 144.19 166.61C153.29 161.04 160.63 152.32 166.21 140.44H107.84V104.4H209.23L209.5 112.9C209.5 130.53 204.93 147.25 195.8 163.05C186.66 178.85 174.84 190.91 160.31 199.22C145.79 207.53 128.75 211.69 109.2 211.69C88.28 211.69 69.62 207.15 53.23 198.06C36.83 188.97 23.86 176.02 14.32 159.22C4.77 142.41 0 124.28 0 104.82C0 78.1499 8.81 54.95 26.44 35.21C47.36 11.74 74.58 0 108.1 0C125.64 0 142.03 3.23998 157.29 9.72998C170.17 15.21 182.78 24.62 195.11 37.96V37.95Z" fill="#132D20"/>
+<path d="M108.25 160.28C137.875 160.28 161.89 136.265 161.89 106.64C161.89 77.0154 137.875 53 108.25 53C78.6256 53 54.6101 77.0154 54.6101 106.64C54.6101 136.265 78.6256 160.28 108.25 160.28Z" fill="#917945"/>
+<path d="M74.8701 116.7C76.4001 132.56 90.5201 142.41 105.39 142.41C129.9 142.3 142.15 124.25 141.6 105.54C141.16 87.6 129.13 70.97 106.04 70.86C90.6101 70.86 76.3901 80.5999 74.8601 96.5699H85.8001C87.9901 87.1599 95.5401 81.58 105.49 81.47C121.14 81.25 129.34 93.18 129.78 105.54C130.33 118.67 122.01 132.02 105.49 131.8C95.5301 131.69 87.9801 126.11 85.8001 116.7H74.8601H74.8701Z" fill="#132D20"/>
+</svg>
+
+
+            </div>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="animate-fade-in">Discover Your Dream Home</h2>
+                <p class="animate-fade-in-delay">Luxury properties designed for the discerning individual</p>
+                <a href="#contact" class="btn ">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text animate-slide-in-left">
+                    <h2>About GCC Properties</h2>
+                    <p>Founded with a vision to redefine luxury living, GCC Properties has established itself as a premier real estate company specializing in high-end residential and commercial properties. Our commitment to excellence, integrity, and innovation has made us a trusted name in the industry.</p>
+                    <p>With decades of combined experience, our team of experts brings unparalleled knowledge and dedication to every project. We don't just sell properties; we create lifestyles that reflect the aspirations of our clients.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>100+</h3>
+                            <p>Properties Sold</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>25+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image animate-slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Modern luxury home">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>We offer comprehensive real estate services tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Property Sales</h3>
+                    <p>Exclusive access to premium residential and commercial properties in prime locations.</p>
+                </div>
+                <div class="service-card animate-fade-in-delay">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Property Search</h3>
+                    <p>Personalized property search based on your specific requirements and preferences.</p>
+                </div>
+                <div class="service-card animate-fade-in-delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Investment Analysis</h3>
+                    <p>Expert advice on property investment opportunities and market trends.</p>
+                </div>
+                <div class="service-card animate-fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Legal Assistance</h3>
+                    <p>Comprehensive support with property documentation and legal procedures.</p>
+                </div>
+                <div class="service-card animate-fade-in-delay">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Property Management</h3>
+                    <p>Professional management services for your investment properties.</p>
+                </div>
+                <div class="service-card animate-fade-in-delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Development Consulting</h3>
+                    <p>Expert guidance for property development and renovation projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <!-- <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Properties</h2>
+                <p style="color: #ffffff;">Explore our collection of exquisite properties</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item ">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80" alt="Modern villa">
+                    <div class="portfolio-overlay">
+                        <h3>Modern Villa</h3>
+                        <p>Dubai Hills</p>
+                    </div>
+                </div>
+                <div class="portfolio-item ">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Penthouse apartment">
+                    <div class="portfolio-overlay">
+                        <h3>Penthouse</h3>
+                        <p>Downtown Dubai</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Beachfront property">
+                    <div class="portfolio-overlay">
+                        <h3>Beachfront Villa</h3>
+                        <p>Palm Jumeirah</p>
+                    </div>
+                </div>
+                <div class="portfolio-item ">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury apartment">
+                    <div class="portfolio-overlay">
+                        <h3>Luxury Apartment</h3>
+                        <p>Business Bay</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Process</h2>
+                <p>How we help you find your perfect property</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step animate-fade-in">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>We begin with a detailed consultation to understand your needs and preferences.</p>
+                </div>
+                <div class="process-step animate-fade-in-delay">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Property Search</h3>
+                    <p>Our team searches our extensive database to find properties that match your criteria.</p>
+                </div>
+                <div class="process-step animate-fade-in-delay-2">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Property Viewing</h3>
+                    <p>We arrange private viewings of shortlisted properties at your convenience.</p>
+                </div>
+                <div class="process-step animate-fade-in">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Negotiation</h3>
+                    <p>Our expert negotiators work to secure the best possible terms for your purchase.</p>
+                </div>
+                <div class="process-step animate-fade-in-delay">
+                    <div class="step-number">05</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>We handle all the paperwork and legal formalities to ensure a smooth transaction.</p>
+                </div>
+                <div class="process-step animate-fade-in-delay-2">
+                    <div class="step-number">06</div>
+                    <div class="step-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Handover</h3>
+                    <p>Final handover of your new property with all necessary documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from those who have experienced our exceptional service</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p>"GCC Properties made our home buying experience seamless and enjoyable. Their attention to detail and professionalism is unmatched. We found our dream home thanks to their expert guidance."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>David Wilson</h4>
+                                <p>CEO, Tech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As a first-time investor, I was nervous about the process, but GCC Properties provided invaluable advice and support. They helped me find a property that has already appreciated significantly."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Lisa Chen</h4>
+                                <p>Entrepreneur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The team at GCC Properties went above and beyond to find us a home that perfectly matched our lifestyle. Their market knowledge and negotiation skills saved us both time and money."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Mark & Sarah Thompson</h4>
+                                <p>Young Professionals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Dream Property?</h2>
+                <p>Contact us today to schedule a consultation with one of our expert property consultants.</p>
+                <a href="#contact" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info animate-slide-in-left">
+                    <h2>Contact Us</h2>
+                    <p>We're here to help you find your perfect property. Reach out to us today.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Erica 2h 972 ajman uptown al zahya - AJMAN</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+971 56 767 2020</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@gccproperties.ae</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://www.instagram.com/gccproperties.ae/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+              <div class="contact-form animate-slide-in-right">
+  <form id="contactForm">
+      <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+          <input type="tel" name="phone" placeholder="Your Phone">
+      </div>
+      <div class="form-group">
+          <select name="service" required>
+              <option value="" disabled selected>Select Service</option>
+              <option value="buying">Buying a Property</option>
+              <option value="selling">Selling a Property</option>
+              <option value="renting">Renting a Property</option>
+              <option value="investment">Investment Consultation</option>
+              <option value="other">Other</option>
+          </select>
+      </div>
+      <div class="form-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+  </form>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>GCC <span>PROPERTIES</span></h2>
+                    <p>Redefining luxury living through exceptional properties and unparalleled service.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Property Sales</a></li>
+                            <li><a href="#services">Property Search</a></li>
+                            <li><a href="#services">Investment Analysis</a></li>
+                            <li><a href="#services">Property Management</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Erica 2h 972 ajman uptown al zahya - AJMAN</li>
+                            <li><i class="fas fa-phone-alt"></i> +971 56 767 2020</li>
+                            <li><i class="fas fa-envelope"></i> info@gccproperties.ae</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GCC Properties. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+<script>
+  // Supabase Init
+  const SUPABASE_URL = "https://lquacpvdiljsmtxibgkl.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxdWFjcHZkaWxqc210eGliZ2tsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM3MTEwNTQsImV4cCI6MjA3OTI4NzA1NH0.4cGeNPpx_ZZDyclADBV8M2ucFiqD1VAp9op66gaDsFs";
+
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  // Form Submit Handler
+  document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      service: form.service.value,
+      message: form.message.value,
+    };
+
+    // Insert into Supabase
+    const { error } = await supabaseClient
+      .from("contact_messages")
+      .insert([data]);
+
+    if (error) {
+      alert("Error: " + error.message);
+    } else {
+      alert("Message sent successfully!");
+      form.reset();
+    }
+  });
+</script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
